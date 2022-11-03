@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.cont {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+h1 {@include h1;}
+h2 {@include h2;}
+h3 {@include h3;}
+a{
+    text-decoration: none;
+    color: $c-main-black;
+}
+ul {list-style-type: none;}
+.btn {
+    @include main-btn;
+    &:hover {background-color: #0886c0;}
+}

@@ -6,9 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Процессинг24</title>
     <!-- CSS -->
-    
+    <link rel="stylesheet" href="./src/styles/css/style.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- HEADER -->
+    <header class="header">
+        <section class="header__top top-header cont">
+            <img class="top-header__logo" src="./public/images/logo.png" loading="lazy" alt="processing24">
+            <div class="top-header__main-btns">
+                <div class="top-header__phone-cont">
+                    <a class="top-header__phone-text" href="tel:+74951278280">
+                        <svg class="top-header__phone-icon" width="24" height="24">
+                            <use href="./public/sprites.svg#phone-icon" />
+                        </svg>
+                        8 (495) 127-82-80</a>
+                </div>
+                <div class="top-header__btns">
+                    <button class="top-header__write-btn btn">Напишите нам</button>
+                    <button class="top-header__profile-btn btn">
+                        <svg class="top-header__btn-icon" width="24" height="24">
+                            <use href="./public/sprites.svg#user-icon" />
+                        </svg>
+                        Личный кабинет
+                    </button>
+                </div>
+                <div class="top-header__burger-menu burger-menu">
+                    <div class="burger-menu__icon">
+                        <div class="burger-menu__line"></div>
+                    </div>
+                </div>
+                <section class="top-header__mask">
+                    <ul class="burger__container">
+                        <li class="burger__item"><a href="#" class="burger__link">Доставка топлива</a></li>
+                        <li class="burger__item">
+                            <a href="#" class="burger__link">Топливные карты
+                                <svg class="burger__arrow-icon" width="24" height="20">
+                                    <use href="./public/sprites.svg#arrow-icon" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="burger__item"><a href="#" class="burger__link">АЗС
+                            <svg class="burger__arrow-icon" width="24" height="20">
+                                <use href="./public/sprites.svg#arrow-icon" />
+                            </svg>
+                        </a></li>
+                        <li class="burger__item"><a href="#" class="burger__link">Цены на топливо</a></li>
+                        <li class="burger__item"><a href="#" class="burger__link">О компании
+                            <svg class="burger__arrow-icon" width="24" height="20">
+                                <use href="./public/sprites.svg#arrow-icon" />
+                            </svg>
+                        </a></li>
+                        <li class="burger__item"><a href="#" class="burger__link">Контакты</a></li>
+                        <li class="burger__btns">
+                            <button class="burger__write-btn btn">Напишите нам</button>
+                            <button class="burger__profile-btn btn">
+                                <svg class="burger__btn-icon" width="24" height="24">
+                                    <use href="./public/sprites.svg#user-icon" />
+                                </svg>
+                                Личный кабинет
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+        <nav class="header__nav nav">
+            <section class="nav__content cont">
+                <ul class="nav__container">
+                    <li class="nav__item"><a href="#" class="nav__link">Доставка топлива</a></li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Топливные карты
+                            <svg class="nav__arrow-icon" width="24" height="20">
+                                <use href="./public/sprites.svg#arrow-icon" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav__item"><a href="#" class="nav__link">АЗС
+                        <svg class="nav__arrow-icon" width="24" height="20">
+                            <use href="./public/sprites.svg#arrow-icon" />
+                        </svg>
+                    </a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Цены на топливо</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">О компании
+                        <svg class="nav__arrow-icon" width="24" height="20">
+                            <use href="./public/sprites.svg#arrow-icon" />
+                        </svg>
+                    </a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <!-- /HEADER -->
+
+    <!-- JS -->
+    <script src="./main.js" type="module"></script>
 </body>
 </html>
