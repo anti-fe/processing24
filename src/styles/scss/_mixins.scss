@@ -45,21 +45,21 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 59px;
-    color: $c-text-gray;
+    color: $c-main-black;
 }
 @mixin h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
-    color: $c-text-gray;
+    color: $c-main-black;
 }
 @mixin h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-    color: $c-text-gray;
+    color: $c-main-black;
 }
 // INPUT
 @mixin input-text {
@@ -67,14 +67,14 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: $c-text-gray;
+    color: $c-main-gray;
 }
 @mixin input-header {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
-    color: $c-text-gray;
+    color: $c-main-black;
 }
 // FLEX
 @mixin flex($jc, $al, $fl) {

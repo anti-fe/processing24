@@ -15,7 +15,7 @@ h1 {
   font-weight: 700;
   font-size: 48px;
   line-height: 59px;
-  color: #C4C4C4;
+  color: #000000;
 }
 
 h2 {
@@ -23,7 +23,7 @@ h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
-  color: #C4C4C4;
+  color: #000000;
 }
 
 h3 {
@@ -31,7 +31,7 @@ h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  color: #C4C4C4;
+  color: #000000;
 }
 
 a {
@@ -60,6 +60,24 @@ ul {
 }
 .btn:hover {
   background-color: #0886c0;
+}
+.btn:focus {
+  outline: 2.5px solid rgba(9, 157, 226, 0.5882352941);
+}
+
+.input {
+  border: 1px solid #D4D4D4;
+  padding: 13px 65px 16px 15px;
+}
+.input:focus {
+  outline: 2.5px solid #098FCF;
+}
+.input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #565656;
 }
 
 .header__top {
@@ -382,4 +400,182 @@ ul {
 }
 .burger__profile-btn > *:first-child {
   margin-right: 10px;
+}
+
+.main {
+  margin-top: 90px;
+}
+@media (max-width: 1160px) {
+  .main {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .main {
+    margin-top: 46px;
+  }
+}
+.main__title {
+  margin-bottom: 48px;
+}
+@media (max-width: 576px) {
+  .main__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 410px) {
+  .main__title {
+    line-height: normal;
+  }
+}
+@media (max-width: 410px) {
+  .main__title {
+    margin-bottom: 32px;
+  }
+}
+.main__order {
+  padding: 46px 55px 46px 96px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 760px) {
+  .main__order {
+    padding: 46px 55px;
+  }
+}
+@media (max-width: 410px) {
+  .main__order {
+    padding: 36px 25px;
+  }
+}
+.main__order-title {
+  margin-bottom: 30px;
+}
+.main__order-title_blue {
+  color: #098FCF;
+}
+@media (max-width: 960px) {
+  .main__order-title {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .main__order-title {
+    text-align: start;
+    font-size: 26px;
+    line-height: normal;
+  }
+}
+.main__order-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media (max-width: 960px) {
+  .main__order-form {
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .main__order-form {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 410px) {
+  .main__order-form {
+    align-items: normal;
+  }
+}
+.main__inputs-row > *:not(:last-child) {
+  margin-right: 14px;
+}
+@media (max-width: 960px) {
+  .main__inputs-row > *:not(:last-child) {
+    margin-bottom: 14px;
+    margin-right: 0;
+  }
+}
+.main__inputs-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+@media (max-width: 960px) {
+  .main__inputs-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.main__input-cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media (max-width: 960px) {
+  .main__input-cont {
+    width: 100%;
+  }
+}
+@media (max-width: 410px) {
+  .main__input-cont {
+    width: 100%;
+  }
+}
+.main__input-cont .main__input {
+  width: 100%;
+}
+.main__input-label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+.main__order-btn {
+  padding: 15px 68px 16px 68px;
+}
+@media (max-width: 410px) {
+  .main__order-btn {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+.main__custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+@media (max-width: 410px) {
+  .main__checkbox-label {
+    font-size: 14px;
+  }
+}
+.main__custom-checkbox + .main__checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+.main__custom-checkbox + .main__checkbox-label::before {
+  content: "";
+  height: 24px;
+  width: 24px;
+  border: 1px solid #D4D4D4;
+  background-color: #F9F9F9;
+  display: inline-block;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.main__custom-checkbox:checked + .main__checkbox-label::before {
+  background-image: url("../../../public/images/check.svg");
+}
+.main__custom-checkbox:focus + .main__checkbox-label::before {
+  outline: 2.5px solid rgba(9, 157, 226, 0.5882352941);
 }/*# sourceMappingURL=style.css.map */
