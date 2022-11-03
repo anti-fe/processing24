@@ -1,0 +1,77 @@
+.cost {
+    margin-top: 100px;
+    @media (max-width:1160px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 576px) {
+        margin-top: 46px;
+    }
+    &__title {
+        @include h2;
+        margin-bottom: 48px;
+        @media (max-width: 410px){
+            margin-bottom: 22px;
+            font-size: 32px;
+        }
+    }
+    &__table-cont {
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+      }
+    }
+    &__table {
+        border: 1px solid $c-stroke-table;
+        width: 100%;
+        margin:0;
+        padding:0;
+        border-collapse: collapse;
+    }
+    &__thead {
+        background-color: $c-bg-dark-blue;
+        border-collapse: collapse;
+    }
+    &__tbody {
+        &::before {
+            content:".";
+            line-height: 20px;
+            color:white;
+            display:block;
+        }
+    }
+    &__cell, &__head-cell {
+        @include btn-top-text;
+        white-space: nowrap;
+    }
+    &__row {
+        border-top: 1px solid $c-stroke-table;
+    }
+    &__head-cell {
+        padding: 20px 30px;
+        text-align: start;
+    }
+    &__cell > span {
+        @include btn-top-text;
+        color: $c-main-black;
+    }
+    &__sort-cell {
+        background-color: $c-main-blue;
+        padding: 16px 20px;
+        color: $c-main-white;
+    }
+    &__class-cell {
+        padding: 16px 30px;
+        border: 1px solid $c-stroke-table;
+    }
+    &__class {
+        @include btn-top-text;
+        color: $c-main-black;
+    }
+    &__cell {
+        padding: 16px 30px;
+        border-bottom: 1px solid $c-stroke-table;
+    }
+}
