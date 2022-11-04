@@ -1,0 +1,90 @@
+.sertificates {
+    padding: 100px 0;
+    @media (max-width:1160px) {
+        padding: 100px 20px;
+    }
+    @media (max-width: 600px) {
+        padding: 40px 20px;
+    }
+    @media (max-width: 576px) {
+        margin-top: 46px;
+    }
+    @media (max-width: 320px) {
+        padding: 20px 20px;
+    }
+    &__title {
+        @include h2;
+        margin-bottom: 48px;
+        @media (max-width: 960px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 410px){
+            font-size: 32px;
+        }
+    }
+    &__header {
+        @include flex(space-between, flex-start, row);
+        @media (max-width: 960px) {
+            flex-direction: column;
+        }
+    }
+    &__slider-btns {
+        @include flex(center,center,row);
+        height: 56px;
+        @media (max-width: 960px) {
+            align-self: flex-end;
+        }
+    }
+    &__slider-btns >*:first-child {
+        margin-right: 16px;
+    }
+    &__next, &__prev {
+        height: 56px;
+        width: 56px;
+        border: 1px solid $c-stroke-input;
+        @include flex(center,center,row);
+        cursor: pointer;
+        transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        -moz-transition: all .2s ease-in;
+        -ms-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        &:hover {
+            background-color: rgb(240, 240, 240);
+        }
+    }
+    &__next::before, &__prev::before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        background-image: url("../../../public/images/arrow.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    &__next::before {
+        transform: rotate(-90deg)    ;
+        -webkit-transform: rotate(-90deg)    ;
+        -moz-transform: rotate(-90deg)    ;
+        -ms-transform: rotate(-90deg)    ;
+        -o-transform: rotate(-90deg)    ;
+}
+    &__prev::before {
+        transform: rotate(90deg)    ;
+        -webkit-transform: rotate(90deg)    ;
+        -moz-transform: rotate(90deg)    ;
+        -ms-transform: rotate(90deg)    ;
+        -o-transform: rotate(90deg)    ;
+}
+}
+.swiper {
+    overflow: auto;
+    &-slide {
+        padding: 28px 20px;
+        box-shadow: $shadow-block;
+        @include flex(center,center,row);
+    }
+    &-wrapper {
+        padding: 20px 0;
+    }
+}
