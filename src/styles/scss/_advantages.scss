@@ -28,28 +28,28 @@
             gap: 10px;
         }
     }
+    .card {
+        padding: 20px;
+        background-color: $c-main-white;
+        @include flex(space-between, flex-start, row);
+        &__icon {
+            margin-right: 20px;
+            min-width: 48px;
+            min-height: 48px;
+    
+        }
+        &__info {
+            @include flex(flex-start,flex-start, column);
+        }
+        &__info >*:first-child {
+            margin-bottom: 12px;
+        }
+        &__title {
+            @include btn-menu-top-text
+        }
+        &__descr {
+            @include input-text
+        }
+    }
 
-}
-.acard {
-    padding: 20px;
-    background-color: $c-main-white;
-    @include flex(space-between, flex-start, row);
-    &__icon {
-        margin-right: 20px;
-        min-width: 48px;
-        min-height: 48px;
-
-    }
-    &__info {
-        @include flex(flex-start,flex-start, column);
-    }
-    &__info >*:first-child {
-        margin-bottom: 12px;
-    }
-    &__title {
-        @include btn-menu-top-text
-    }
-    &__descr {
-        @include input-text
-    }
 }

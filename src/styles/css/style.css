@@ -932,27 +932,26 @@ ul {
     grid-template-columns: 1fr;
   }
 }
-
-.card {
+.work .card {
   padding: 30px;
   background-color: #043C77;
 }
 @media (max-width: 960px) {
-  .card:nth-child(3) {
+  .work .card:nth-child(3) {
     grid-column: 1/3;
   }
 }
 @media (max-width: 600px) {
-  .card:nth-child(3) {
+  .work .card:nth-child(3) {
     grid-column: auto;
   }
 }
 @media (max-width: 600px) {
-  .card:nth-child(3) .card__header {
+  .work .card:nth-child(3) .work .card__header {
     margin-bottom: 30px;
   }
 }
-.card:hover .card__btn {
+.work .card:hover .work .card__btn {
   -webkit-transition: transform 0.2s ease-in;
   -moz-transition: transform 0.2s ease-in;
   -ms-transition: transform 0.2s ease-in;
@@ -960,7 +959,7 @@ ul {
   animation: 1s infinite moveBtn;
   -webkit-animation: 1s infinite moveBtn;
 }
-.card__header {
+.work .card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -968,30 +967,32 @@ ul {
   margin-bottom: 30px;
 }
 @media (max-width: 600px) {
-  .card__header {
+  .work .card__header {
     margin-bottom: 10px;
     align-items: flex-start;
   }
 }
-.card__icon {
-  height: 46px;
-  width: 46px;
+@media (max-width: 600px) {
+  .work .card__icon {
+    height: 46px;
+    width: 46px;
+  }
 }
-.card__action {
+.work .card__action {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.card__action > *:first-child {
+.work .card__action > *:first-child {
   margin-bottom: 17px;
 }
 @media (max-width: 600px) {
-  .card__action > *:first-child {
+  .work .card__action > *:first-child {
     margin-bottom: 10px;
   }
 }
-.card__time {
+.work .card__time {
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
@@ -999,24 +1000,24 @@ ul {
   color: #000000;
   color: #FFFFFF;
 }
-.card__btn {
+.work .card__btn {
   transition: transform 0.2s ease-in;
   -webkit-transition: transform 0.2s ease-in;
   -moz-transition: transform 0.2s ease-in;
   -ms-transition: transform 0.2s ease-in;
   -o-transition: transform 0.2s ease-in;
 }
-.card__title {
+.work .card__title {
   color: #FFFFFF;
   font-weight: 500;
   margin-bottom: 24px;
 }
 @media (max-width: 600px) {
-  .card__title {
+  .work .card__title {
     margin-bottom: 10px;
   }
 }
-.card__descr {
+.work .card__descr {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1024,7 +1025,7 @@ ul {
   color: #000000;
   color: #FFFFFF;
 }
-.card__under-descr {
+.work .card__under-descr {
   color: #FFFFFF;
   margin-top: 20px;
   font-style: normal;
@@ -1033,7 +1034,7 @@ ul {
   line-height: 140%;
 }
 @media (max-width: 600px) {
-  .card__under-descr {
+  .work .card__under-descr {
     margin-top: 6px;
   }
 }
@@ -1098,8 +1099,7 @@ ul {
     gap: 10px;
   }
 }
-
-.acard {
+.advantages .card {
   padding: 20px;
   background-color: #FFFFFF;
   display: flex;
@@ -1107,28 +1107,28 @@ ul {
   align-items: flex-start;
   flex-direction: row;
 }
-.acard__icon {
+.advantages .card__icon {
   margin-right: 20px;
   min-width: 48px;
   min-height: 48px;
 }
-.acard__info {
+.advantages .card__info {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
 }
-.acard__info > *:first-child {
+.advantages .card__info > *:first-child {
   margin-bottom: 12px;
 }
-.acard__title {
+.advantages .card__title {
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
   color: #000000;
 }
-.acard__descr {
+.advantages .card__descr {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1316,4 +1316,41 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+
+.reviews {
+  padding-bottom: 100px;
+}
+@media (max-width: 1160px) {
+  .reviews {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .reviews {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 320px) {
+  .reviews {
+    padding-bottom: 20px;
+  }
+}
+.reviews__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 29px;
+}
+@media (max-width: 960px) {
+  .reviews__title {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 410px) {
+  .reviews__title {
+    font-size: 32px;
+  }
 }/*# sourceMappingURL=style.css.map */
