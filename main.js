@@ -2,6 +2,7 @@ import burgerMenu from "./src/js/burger-menu.js";
 import closeBurgerMenu from "./src/js/close-burger-menu.js";
 import rangeInput from "./src/js/range-input.js";
 import sertificatesSlider from "./src/js/slider-sertificates.js";
+import partnersSlider from "./src/js/slider-partners.js";
 
 const burgerCont = document.querySelector('.top-header__mask');
 const burger = document.querySelector('.burger-menu');

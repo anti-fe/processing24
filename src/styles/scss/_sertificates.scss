@@ -75,16 +75,15 @@
         -moz-transform: rotate(90deg)    ;
         -ms-transform: rotate(90deg)    ;
         -o-transform: rotate(90deg)    ;
-}
-}
-.swiper {
-    overflow: auto;
-    &-slide {
-        padding: 28px 20px;
-        box-shadow: $shadow-block;
-        @include flex(center,center,row);
     }
-    &-wrapper {
-        padding: 20px 0;
+    .swiper {
+        &-slide {
+            padding: 28px 20px;
+            box-shadow: $shadow-block;
+            @include flex(center,center,row);
+        }
+        &-wrapper {
+            padding: 20px 0;
+        }
     }
 }
