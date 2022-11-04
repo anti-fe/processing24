@@ -1,0 +1,55 @@
+.advantages {
+    padding: 80px 0;
+    background-color: $c-bg-gray;
+    @media (max-width:1160px) {
+        padding: 80px 20px;
+    }
+    @media (max-width: 576px) {
+        margin-top: 46px;
+    }
+    &__title {
+        @include h2;
+        margin-bottom: 48px;
+        @media (max-width: 410px){
+            margin-bottom: 22px;
+            font-size: 32px;
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        @media (max-width: 960px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+
+}
+.acard {
+    padding: 20px;
+    background-color: $c-main-white;
+    @include flex(space-between, flex-start, row);
+    &__icon {
+        margin-right: 20px;
+        min-width: 48px;
+        min-height: 48px;
+
+    }
+    &__info {
+        @include flex(flex-start,flex-start, column);
+    }
+    &__info >*:first-child {
+        margin-bottom: 12px;
+    }
+    &__title {
+        @include btn-menu-top-text
+    }
+    &__descr {
+        @include input-text
+    }
+}
