@@ -1,0 +1,169 @@
+.delivery {
+    margin-top: 100px;
+    background-color: $c-bg-gray;
+    padding: 74px 0;
+    @media (max-width:1160px) {
+        padding: 60px 20px;
+    }
+    @media (max-width: 576px) {
+        margin-top: 46px;
+    }
+    &__title {
+        @include h2;
+        margin-bottom: 48px;
+        @media (max-width: 410px){
+            margin-bottom: 22px;
+            font-size: 32px;
+            line-height: normal;
+        }
+    }
+    &__calculator {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+        @media (max-width: 960px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+.calculator {
+    &__inputs {
+        @media (max-width: 960px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 500px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+    &__inputs >*:not(:last-child) {
+        margin-bottom: 16px;
+        @media (max-width: 960px) {
+            margin-bottom: 0;
+        }
+    }
+    &__input-cont {
+        @include flex(flex-start, flex-start, column);
+    }
+    &__input-cont >*:first-child {
+        margin-bottom: 8px;
+    }
+    &__label {
+        @include input-header;
+    }
+    &__input {
+        width: 100%;
+        padding: 13px 15px 16px 15px;
+    }
+    &__select {
+        -webkit-appearance: none;
+        appearance: none;
+        position: relative;
+        padding-right: 15px;
+        background-position-x: 98%;
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+        background-image: url("../../../public/images/arrow.svg");
+    }
+    &__input-range {
+        position: relative;
+        width: 100%;
+    }
+    &__input-val {
+        background-color: $c-main-white !important;
+        width: 100%;
+    }
+    &__range {
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: rgba(9, 143, 207, 1);
+        border: none;
+        outline: none;
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none !important;
+            appearance: none;
+            width: 16px;
+            height:16px;
+            border: 2px solid $c-main-blue;
+            border-radius: 50%;
+            background-color: $c-main-blue;
+            cursor: pointer;
+            box-shadow: $shadow-btn;
+        } 
+        &::-webkit-slider-thumb:focus {
+            outline: 4px solid rgba(9, 144, 207, 0.548);
+        }
+    }
+    &__results {
+        box-shadow: $shadow-block;
+        padding: 40px;
+    }
+}
+.results {
+    &__title {
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+    &__info {
+        padding-top: 16px;
+    }
+    &__info-row {
+        @include flex(space-between, center, row);
+        padding: 14px 0 16px 0;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $c-stroke-table;
+            height: 1px;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+        @media (max-width: 500px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__name {
+        @include text;
+        text-align: left;
+    }
+    &__descr {
+        max-width: 326px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14.63px;
+        margin-top: 10px;
+        color: $c-main-gray;
+        
+    }
+    &__value {
+        @include text;
+        text-align: right;
+        white-space: nowrap;
+        margin-left: 20px;
+        @media (max-width: 500px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+    &__value_bold {
+        @include text-phone;
+    }
+    &__order-btn {
+        padding: 14px 68px 16px 68px;
+        @media (max-width: 500px) {
+            padding: 14px 0 16px 0;
+            width: 100%;
+        }
+    }
+}
