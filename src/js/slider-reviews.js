@@ -1,4 +1,4 @@
-const sertificatesSlider = new Swiper('.reviews__slider', {
+const reviewsSlider = new Swiper('.reviews__slider', {
     direction: 'horizontal',
     slidesPerView: 2,
     spaceBetween: 30,
@@ -15,11 +15,8 @@ const sertificatesSlider = new Swiper('.reviews__slider', {
           slidesPerView: 1,
           spaceBetween: 20
         },
-        610: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        900: {
+
+        960: {
           slidesPerView: 2,
           spaceBetween: 30
         }
