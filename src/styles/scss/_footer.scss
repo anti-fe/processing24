@@ -1,0 +1,70 @@
+.footer {
+    background-color: $c-bg-gray;
+    padding: 60px 0;
+    @media (max-width: 1200px) {
+        padding: 60px 20px;
+    }
+    &__content {
+        @include flex(space-between, flex-start, row);
+        @media (max-width: 960px) {
+            flex-direction: column;
+            gap: 46px;
+            align-items: center;
+        }
+        
+    }
+    &__col {
+        @include flex(normal,normal, column);
+    }
+    &__cols {
+        @include flex(normal,flex-start, row);
+        @media (max-width: 476px) {
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+    }
+    &__cols >*:not(:last-child) {
+        margin-right: 100px;
+        
+        @media (max-width: 476px) {
+            margin-right: 0;
+        }
+    }
+    &__copyright {
+        @include input-text;
+        margin-top: 15px;
+    }
+    &__list >*:not(:last-child) {
+        @media (max-width: 960px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__item {
+        @media (max-width: 960px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__link {
+        @include btn-menu-top-text;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__sales-department {
+        @include btn-menu-top-text;
+        margin-bottom: 4px;
+        text-align: end;
+        @media (max-width: 960px) {
+            text-align: center;
+        }
+    }
+    &__tel {
+        @include text-phone;
+        color: $c-main-blue;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
